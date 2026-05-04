@@ -1,16 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>{{ .Title }}</title>
-</head>
-<body>
+{{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<article class="article">
 
-<div>
-{{ .Content }}
-</div>
+  <div class="article-head">
+    <h1>{{ .Title }}</h1>
+    <p class="date">{{ .Date.Format "2006.01.02" }}</p>
+  </div>
 
-</body>
-</html>
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.buylink }}
+  <div class="cta-box">
+    <p>현재 상품 정보나 할인 여부가 궁금하다면 아래에서 확인해보세요.</p>
+    <a href="{{ . }}" target="_blank" rel="nofollow sponsored noopener" class="cta-btn">
+      현재 할인 정보 확인하기
+    </a>
+  </div>
+  {{ end }}
+
+  {{ with .Params.originallink }}
+  <div class="origin-box">
+    <a href="{{ . }}" target="_blank" rel="noopener">
+      원문 보기 →
+    </a>
+  </div>
+  {{ end }}
+
+</article>
+
+{{ end }}
