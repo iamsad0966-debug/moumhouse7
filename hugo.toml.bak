@@ -4,7 +4,7 @@ title = "라이프인포허브"
 defaultContentLanguage = "ko"
 
 # SEO 기본
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # 글 개수 (페이지네이션)
 paginate = 12
