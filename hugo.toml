@@ -1,3 +1,43 @@
-baseURL = '/'
-languageCode = 'ko-kr'
-title = 'moumhouse7'
+baseURL = "https://moumhouse7.netlify.app/"
+languageCode = "ko-kr"
+title = "라이프인포허브"
+defaultContentLanguage = "ko"
+
+# SEO 기본
+enableRobotsTXT = true
+
+# 글 개수 (페이지네이션)
+paginate = 12
+
+# URL 구조 (SEO 중요)
+[permalinks]
+  posts = "/posts/:slug/"
+
+# sitemap
+[sitemap]
+  changefreq = "daily"
+  priority = 0.7
+  filename = "sitemap.xml"
+
+# Taxonomy (카테고리/태그)
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# 출력 포맷
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+# 마크다운 설정
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# 캐싱 (속도)
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"

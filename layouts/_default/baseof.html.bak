@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">{{ .Site.Title }}</a>
+    <nav>
+      <a href="/">홈</a>
+      <a href="/posts/">전체글</a>
+      <a href="/categories/">카테고리</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>생활정보와 실속 있는 쇼핑 정보를 정리하는 아카이브 사이트입니다.</p>
+  </div>
+</footer>
+
+</body>
+</html>

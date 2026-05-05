@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lifeallinfo.com/sitemap.xml

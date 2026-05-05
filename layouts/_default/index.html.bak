@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<section class="hero">
+  <h1>생활정보와 쇼핑 추천을 한눈에</h1>
+  <p>
+    일상 생활에 필요한 생활정보, 상품 추천, 가격 비교, 할인 정보를 보기 쉽게 정리합니다.
+  </p>
+</section>
+
+<section class="section-title">
+  <h2>최신 글</h2>
+</section>
+
+<div class="post-grid">
+  {{ range first 12 (where .Site.RegularPages "Section" "posts") }}
+  <article class="post-card">
+    <a href="{{ .RelPermalink }}">
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Summary | plainify | truncate 90 }}</p>
+      <span class="read-more">자세히 보기 →</span>
+    </a>
+  </article>
+  {{ end }}
+</div>
+
+{{ end }}

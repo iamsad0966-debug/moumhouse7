@@ -6,6 +6,14 @@
     <description>Recent content in Categories on moumhouse7</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
+    <lastBuildDate>Wed, 06 May 2026 02:39:27 +0900</lastBuildDate>
     <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>쇼핑정보</title>
+      <link>//localhost:1313/categories/%EC%87%BC%ED%95%91%EC%A0%95%EB%B3%B4/</link>
+      <pubDate>Wed, 06 May 2026 02:39:27 +0900</pubDate>
+      <guid>//localhost:1313/categories/%EC%87%BC%ED%95%91%EC%A0%95%EB%B3%B4/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

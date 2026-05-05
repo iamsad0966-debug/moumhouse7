@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ $paginator := .Paginate .Pages }}
+
+<ul>
+  {{ range $paginator.Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+  {{ end }}
+</ul>
+
+<div class="pagination" style="margin-top:30px; display:flex; gap:12px; align-items:center;">
+  {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}">← 이전</a>
+  {{ end }}
+
+  <span>
+    {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}
+  </span>
+
+  {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}">다음 →</a>
+  {{ end }}
+</div>
+
+{{ end }}
